@@ -7,12 +7,11 @@
 
 /* GAYA LATAR BELAKANG DARI GAMBAR (INDEX.HTML) */
 body {
-    /* Replicate the purple/blue gradient background */
     background: linear-gradient(135deg, #4b3f8f 0%, #2a2066 100%);
-    color: white; /* Text color is white */
+    color: white; 
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    min-height: 100vh; /* Ensure the gradient covers the entire screen */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,13 +47,13 @@ body {
 /* Individual Process Card Styling (Local/Export) */
 .process-card {
     flex: 1;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    backdrop-filter: blur(5px); /* Optional: add a blur effect */
-    border-radius: 20px; /* Highly rounded corners */
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
     padding: 40px 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-    min-height: 350px; /* Menjaga konsistensi tinggi kartu */
+    min-height: 350px; 
 }
 
 .process-card:hover {
@@ -76,17 +75,17 @@ body {
 .process-card p {
     font-size: 0.95em;
     margin-bottom: 30px;
-    color: #cccccc; /* Slightly lighter text for description */
-    min-height: 70px; /* Ensure cards have similar height */
+    color: #cccccc;
+    min-height: 70px;
 }
 
 /* Button Styling */
 .btn-process {
     display: inline-block;
     background: white;
-    color: #4b3f8f; /* Use the primary purple color for text */
+    color: #4b3f8f;
     padding: 12px 25px;
-    border-radius: 50px; /* Highly rounded pill shape */
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s;
@@ -99,7 +98,7 @@ body {
 /* Gaya untuk tombol Konversi APK */
 .btn-apk-convert {
     display: inline-block;
-    background: #00bcd4; /* Warna Cyan/Biru muda untuk menonjolkan fungsi */
+    background: #00bcd4;
     color: white;
     padding: 15px 30px;
     border-radius: 50px;
