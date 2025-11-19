@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const calculatorForm = document.getElementById('export-calculator');
     
     // Jalankan perhitungan awal untuk menampilkan nilai $0.00
-    // Catatan: Ini akan berfungsi hanya jika elemen kalkulator ada di halaman saat ini (export-process.html)
     if (document.getElementById('export-calculator')) {
         calculateExportValues(); 
     }
