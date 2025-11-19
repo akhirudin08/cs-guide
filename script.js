@@ -4,7 +4,6 @@ function calculateExportValues() {
     
     const netWeight = parseFloat(document.getElementById('netWeight').value) || 0;
     const pricePerKg = parseFloat(document.getElementById('pricePerKg').value) || 0;
-    // Freight Cost Raw digunakan sebagai nilai Freight yang sudah diestimasikan/diberikan oleh GA
     const freightCostRaw = parseFloat(document.getElementById('freightCostRaw').value) || 0; 
     const usdRate = parseFloat(document.getElementById('usdRate').value) || 1; 
     
@@ -16,11 +15,9 @@ function calculateExportValues() {
     // --- 2. Perhitungan Financial (Sesuai Urutan dan Rumus Step 12) ---
     
     // A. FOB = Net Weight (kg) × Harga Barang ÷ 1000
-    // Asumsi: "Harga Barang" adalah pricePerKg (harga per unit/kg)
     const fob = (netWeight * pricePerKg) / 1000;
     
     // B. Invoice = Freight ÷ Dollar Rate (hari ini)
-    // Menggunakan freightCostRaw sebagai nilai Freight yang sudah diketahui untuk mencari Invoice.
     let invoice = 0;
     if (usdRate !== 0) {
         invoice = freightCostRaw / usdRate;
@@ -54,10 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const calculatorForm = document.getElementById('export-calculator');
     
     // Jalankan perhitungan awal untuk menampilkan nilai $0.00
-    calculateExportValues(); 
+    // Catatan: Ini akan berfungsi hanya jika elemen kalkulator ada di halaman saat ini (export-process.html)
+    if (document.getElementById('export-calculator')) {
+        calculateExportValues(); 
+    }
 
     if (calculatorForm) {
-        // Tambahkan event listener ke semua input bertipe 'number'
         const inputs = calculatorForm.querySelectorAll('input[type="number"]');
         inputs.forEach(input => {
             input.addEventListener('input', calculateExportValues);
